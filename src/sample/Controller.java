@@ -4,10 +4,10 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 
-import java.util.EventListener;
+import java.awt.event.ActionEvent;
 import java.util.List;
 
 public class Controller {
@@ -16,6 +16,8 @@ public class Controller {
     @FXML
     private Tab tab2;
     private MoreButton moreButton;
+    @FXML
+    private TabPane tabPane;
 
 
     public void initialize() {
@@ -24,13 +26,10 @@ public class Controller {
 
         VBox vBox1 = new VBox();
         vBox1.setAlignment(Pos.CENTER);
-
-        List<List<String>> page = Articles.getAllArticles();
+        //First view
+        List<List<String>> page = Article.getAllArticles();
         for (List<String> article : page) {
-            ArticleTextField textField = new ArticleTextField("1   :  " + article.get(0));
-            textField.setFont(new Font(20));
-            textField.setStyle("-fx-highlight-fill: null;\n" + "-fx-highlight-text-fill: null;");
-            textField.setEditable(false);
+            ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + article.get(0));
             vBox1.getChildren().add(textField);
         }
 
@@ -38,24 +37,19 @@ public class Controller {
         moreButton = new MoreButton("Więcej");
         moreButton.setOnMouseClicked(s -> {
             moreButton.setCount(moreButton.getCount() + 1);
-            List<List<String>> nextPage = Articles.getNextArticles(moreButton.getCount());
-            for (List<String> article : nextPage) {
-                ArticleTextField textField = new ArticleTextField(article.get(0));
-                textField.setFont(new Font(20));
-                textField.setStyle("-fx-highlight-fill: null;\n" + "-fx-highlight-text-fill: null;");
-                textField.setEditable(false);
-                vBox1.getChildren().add(textField);
+            int count = page.size();
+            page.addAll(Article.getNextArticles(moreButton.getCount()));
+            for (int i = count; i < page.size(); i++) {
+                ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + page.get(i).get(0));
+
+                vBox1.getChildren().add(vBox1.getChildren().size() - 1, textField);
             }
         });
-
         vBox1.getChildren().add(moreButton);
 
         ScrollPane scrollPane = new ScrollPane(vBox1);
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);
         tab1.setContent(scrollPane);
-
     }
-
-
 }

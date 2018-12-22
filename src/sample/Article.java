@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Articles {
+public class Article {
 
     public static List<List<String>> getAllArticles() {
         Connection connect = Jsoup.connect("https://wiadomosci.onet.pl");
