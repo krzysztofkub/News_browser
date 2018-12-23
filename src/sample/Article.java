@@ -5,12 +5,14 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Article {
-
     public static List<List<String>> getAllArticles() {
         Connection connect = Jsoup.connect("https://wiadomosci.onet.pl");
         List<List<String>> list = new ArrayList<>();
@@ -25,18 +27,15 @@ public class Article {
                     Document document2 = connect2.get();
                     Element title = document2.select("h1.mainTitle").first();
                     Element intro = document2.select("div#lead").first();
-                    Elements paragraphs = document2.select("div#detail");
-                    if (paragraphs.size() == 0) {
-                        paragraphs = document2.select("div.articleBody");
+                    Element text = document2.select("div#detail").first();
+                    Element mainPhoto = document2.select("figure.mainPhoto").first();
+                    if (text == null) {
+                        text = document2.select("div.articleBody").first();
                     }
                     article.add(title.text());
                     article.add(intro.text());
-
-                    StringBuilder stringBuilder = new StringBuilder();
-                    for (Element element : paragraphs) {
-                        stringBuilder.append(element.text());
-                    }
-                    article.add(paragraphs.html());
+                    article.add(text.html());
+                    article.add(mainPhoto.html());
 
                     list.add(article);
 
@@ -51,13 +50,15 @@ public class Article {
 
     }
 
+
     public static List<List<String>> getNextArticles(int count) {
 
-        Connection connect = Jsoup.connect("https://wiadomosci.onet.pl/?ajax=" + count +"&page=1");
+        Connection connect = Jsoup.connect("https://wiadomosci.onet.pl/?ajax=" + count + "&page=1");
         List<List<String>> list = loadByConnection(connect);
         return list;
 
     }
+
 
     public static List<List<String>> loadByConnection(Connection connect) {
         List<List<String>> list = new ArrayList<>();
@@ -71,18 +72,15 @@ public class Article {
                     Document document2 = connect2.get();
                     Element title = document2.select("h1.mainTitle").first();
                     Element intro = document2.select("div#lead").first();
-                    Elements paragraphs = document2.select("div#detail");
-                    if (paragraphs.size() == 0) {
-                        paragraphs = document2.select("div.articleBody");
+                    Element text = document2.select("div#detail").first();
+                    Element mainPhoto = document2.select("figure.mainPhoto").first();
+                    if (text == null) {
+                        text = document2.select("div.articleBody").first();
                     }
                     article.add(title.text());
                     article.add(intro.text());
-
-                    StringBuilder stringBuilder = new StringBuilder();
-                    for (Element element : paragraphs) {
-                        stringBuilder.append(element.text());
-                    }
-                    article.add(paragraphs.html());
+                    article.add(text.html());
+                    article.add(mainPhoto.html());
 
                     list.add(article);
 
@@ -96,6 +94,10 @@ public class Article {
         return list;
     }
 
+
+    public static String getImages(String article) {
+        return article.replaceAll("src=\"", "src=\"http:");
+    }
 
 
 }

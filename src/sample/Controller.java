@@ -24,7 +24,7 @@ public class Controller {
         //First view
         List<List<String>> page = Article.getAllArticles();
         for (List<String> article : page) {
-            ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + article.get(0), article.get(0),article.get(1), article.get(2));
+            ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + article.get(0), article.get(0),article.get(1), article.get(2),article.get(3));
             vBox1.getChildren().add(textField);
         }
 
@@ -35,7 +35,7 @@ public class Controller {
             int count = page.size();
             page.addAll(Article.getNextArticles(moreButton.getCount()));
             for (int i = count; i < page.size(); i++) {
-                ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + page.get(i).get(0), page.get(i).get(0),page.get(i).get(1), page.get(i).get(2));
+                ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + page.get(i).get(0), page.get(i).get(0),page.get(i).get(1), page.get(i).get(2),page.get(i).get(3));
                 vBox1.getChildren().add(vBox1.getChildren().size() - 1, textField);
             }
         });

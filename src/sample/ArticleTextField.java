@@ -19,7 +19,7 @@ public class ArticleTextField extends TextField {
     }
 
 
-    public ArticleTextField(String text, String title, String intro, String artcile) {
+    public ArticleTextField(String text, String title, String intro, String artcile, String mainPhoto) {
         super(text);
         count++;
         this.setFont(new Font(20));
@@ -39,8 +39,8 @@ public class ArticleTextField extends TextField {
             controller.setMainStage(stageTheTextFieldBelongs);
             controller.getTitle().setText(title);
             controller.getIntro().setText(intro);
-            controller.getWebView().getEngine().loadContent(artcile);
 
+            controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto) + Article.getImages(artcile));
 
             Scene articleScene = new Scene(articleRoot);
             Stage articleStage = new Stage();

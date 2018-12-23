@@ -44,6 +44,7 @@ public class ArticleScene {
 
     public void initialize() {
         button.setStyle("-fx-background-color: red");
+
     }
 
     @FXML

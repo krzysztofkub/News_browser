@@ -4,13 +4,16 @@
     <bookmark url="file://$PROJECT_DIR$/src/sample/sample.fxml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="- need to add article text">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="- shows news">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ArticleScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ArticleScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/News_browser/sample/ArticleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/News_browser/sample/ArticleScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/News_browser/sample/ArticleTextField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/News_browser/sample/ArticleTextField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/News_browser/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/News_browser/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/News_browser/sample/MoreButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/News_browser/sample/MoreButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/ArticleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ArticleScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/ArticleTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ArticleTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MoreButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MoreButton.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="26" column="160" selection-start-line="26" selection-start-column="160" selection-end-line="26" selection-end-column="160" />
+            <state relative-caret-position="103">
+              <caret line="26" column="177" selection-start-line="26" selection-start-column="177" selection-end-line="26" selection-end-column="177" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,8 +99,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Article.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="96" />
+            <state relative-caret-position="268">
+              <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+              <folding>
+                <element signature="e#3334#3335#0" expanded="true" />
+                <element signature="e#3400#3401#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,28 +112,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/ArticleScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="540">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#560#561#0" expanded="true" />
                 <element signature="e#588#589#0" expanded="true" />
                 <element signature="e#624#625#0" expanded="true" />
                 <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
                 <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/ArticleScene.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -134,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/ArticleTextField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+            <state relative-caret-position="165">
+              <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,6 +165,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -180,10 +181,11 @@
         <option value="$PROJECT_DIR$/src/sample/Article.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/MoreButton.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/ArticleScene.fxml" />
         <option value="$PROJECT_DIR$/src/sample/ArticleScene.java" />
         <option value="$PROJECT_DIR$/src/sample/ArticleTextField.java" />
-        <option value="$PROJECT_DIR$/src/sample/ArticleScene.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Article.java" />
       </list>
     </option>
   </component>
@@ -239,7 +241,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545569589913" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545576192105" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="/opt/SceneBuilder/SceneBuilder" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -346,7 +348,7 @@
       <workItem from="1545489268831" duration="24766000" />
       <workItem from="1545555260622" duration="5370000" />
       <workItem from="1545560794622" duration="1907000" />
-      <workItem from="1545563968796" duration="5483000" />
+      <workItem from="1545563968796" duration="12250000" />
     </task>
     <task id="LOCAL-00001" summary="- need to add article stage">
       <created>1545517330114</created>
@@ -362,17 +364,24 @@
       <option name="project" value="LOCAL" />
       <updated>1545562673481</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- shows news">
+      <created>1545569609718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545569609718</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38828000" />
+    <option name="totallyTimeSpent" value="45595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="25" width="1321" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.151681" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.151681" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,8 +390,8 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3294509" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3294509" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -417,7 +426,17 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="- need to add article stage" />
     <MESSAGE value="- need to add article text" />
-    <option name="LAST_COMMIT_MESSAGE" value="- need to add article text" />
+    <MESSAGE value="- shows news" />
+    <option name="LAST_COMMIT_MESSAGE" value="- shows news" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="text.text()" />
+        <watch expression="text.html()" />
+        <watch expression="article.matches(&quot;(.*)src=(.*)&quot;)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -468,33 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ArticleScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ArticleTextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MoreButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -504,18 +496,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="26" column="160" selection-start-line="26" selection-start-column="160" selection-end-line="26" selection-end-column="160" />
+        <state relative-caret-position="103">
+          <caret line="26" column="177" selection-start-line="26" selection-start-column="177" selection-end-line="26" selection-end-column="177" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ArticleTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ArticleScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="96" />
+        <state relative-caret-position="268">
+          <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+          <folding>
+            <element signature="e#3334#3335#0" expanded="true" />
+            <element signature="e#3400#3401#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
