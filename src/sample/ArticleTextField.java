@@ -19,7 +19,7 @@ public class ArticleTextField extends TextField {
     }
 
 
-    public ArticleTextField(String text) {
+    public ArticleTextField(String text, String title, String intro, String artcile) {
         super(text);
         count++;
         this.setFont(new Font(20));
@@ -28,16 +28,23 @@ public class ArticleTextField extends TextField {
         this.setOnMouseClicked(e -> {
             Stage stageTheTextFieldBelongs = (Stage) this.getScene().getWindow();
             Parent articleRoot = null;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ArticleScene.fxml"));
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("ArticleScene.fxml"));
                 articleRoot = loader.load();
-                ArticleScene controller = loader.getController();
-                controller.setMainStage(stageTheTextFieldBelongs);
+
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
+            ArticleScene controller = loader.getController();
+            controller.setMainStage(stageTheTextFieldBelongs);
+            controller.getTitle().setText(title);
+            controller.getIntro().setText(intro);
+            controller.getWebView().getEngine().loadContent(artcile);
+
+
             Scene articleScene = new Scene(articleRoot);
             Stage articleStage = new Stage();
+
             articleStage.setScene(articleScene);
             articleStage.setMaximized(true);
             stageTheTextFieldBelongs.hide();

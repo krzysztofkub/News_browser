@@ -4,10 +4,15 @@ import javafx.scene.control.Button;
 
 public class MoreButton extends Button {
     private int count;
+
+
     public MoreButton(String text) {
         super(text);
-        this.setPrefWidth(600);
         count = 0;
+        this.setPrefWidth(1000);
+        this.setPrefHeight(40);
+        this.setMinHeight(50);
+        this.setStyle("-fx-background-color:red; -fx-font-size:18; -fx-font-weight: bold");
     }
 
 

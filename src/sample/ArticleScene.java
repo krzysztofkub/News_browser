@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 public class ArticleScene {
@@ -17,12 +18,33 @@ public class ArticleScene {
     private TextArea intro;
     @FXML
     private TextField title;
+    @FXML
+    private WebView webView;
 
 
     public void setMainStage(Stage mainStage) {
         this.mainStage = mainStage;
     }
 
+
+    public TextArea getIntro() {
+        return intro;
+    }
+
+
+    public TextField getTitle() {
+        return title;
+    }
+
+
+    public WebView getWebView() {
+        return webView;
+    }
+
+
+    public void initialize() {
+        button.setStyle("-fx-background-color: red");
+    }
 
     @FXML
     void buttonOnClick() {
