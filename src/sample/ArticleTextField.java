@@ -27,10 +27,12 @@ public class ArticleTextField extends TextField {
         this.setEditable(false);
         this.setOnMouseClicked(e -> {
             Stage stageTheTextFieldBelongs = (Stage) this.getScene().getWindow();
-            stageTheTextFieldBelongs.hide();
             Parent articleRoot = null;
             try {
-                articleRoot = FXMLLoader.load(getClass().getResource("ArticleScene.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ArticleScene.fxml"));
+                articleRoot = loader.load();
+                ArticleScene controller = loader.getController();
+                controller.setMainStage(stageTheTextFieldBelongs);
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -38,7 +40,10 @@ public class ArticleTextField extends TextField {
             Stage articleStage = new Stage();
             articleStage.setScene(articleScene);
             articleStage.setMaximized(true);
+            stageTheTextFieldBelongs.hide();
             articleStage.show();
+
+
         });
     }
 
