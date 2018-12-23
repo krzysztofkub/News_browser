@@ -10,6 +10,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("firstPage.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         primaryStage.setTitle("Prezent dla Dziadka");
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);

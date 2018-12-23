@@ -9,7 +9,7 @@ public class MoreButton extends Button {
         this.setPrefWidth(1000);
         this.setPrefHeight(40);
         this.setMinHeight(50);
-        this.setStyle("-fx-background-color:red; -fx-font-size:18; -fx-font-weight: bold");
+
     }
 
     public int getCount() {

@@ -1,0 +1,99 @@
+.text-field#title:hover {
+    -fx-background-color: white;
+    -fx-cursor: default;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+.text-field:hover {
+    -fx-background-color: orange;
+    -fx-border-color: blue;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-cursor: hand;
+}
+
+#title:hover {
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-background-color: orange;
+    -fx-background-radius: 22;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-text-fill: floralwhite;
+    -fx-cursor: hand;
+
+}
+
+
+.button:hover {
+    -fx-border-color: blue;
+    -fx-border-width: 3;
+    -fx-border-radius: 22;
+}
+
+/*Scroll-bar*/
+
+.track {
+    -fx-background-color: transparent ;
+}
+
+.thumb {
+    -fx-background-color: orange;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+.increment-button ,
+.decrement-button {
+
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+
+}
+
+.increment-arrow,
+.decrement-arrow
+{
+    -fx-shape: " ";
+
+}
+
+/*Tab*/
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: orange;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: black;
+}
+

@@ -40,6 +40,7 @@ public class SportArticleTextField extends TextField {
             controller.getWebView().getEngine().loadContent(article.get(3) + article.get(1) + article.get(2));
 
             Scene articleScene = new Scene(articleRoot);
+            articleScene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
             Stage articleStage = new Stage();
 
             articleStage.setScene(articleScene);

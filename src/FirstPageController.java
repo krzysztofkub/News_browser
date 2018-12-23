@@ -16,8 +16,8 @@ public class FirstPageController {
     private MoreButton sportMoreButton;
 
     public void initialize() {
-        tab1.setStyle("-fx-font-size: 16pt;");
-        tab2.setStyle("-fx-font-size: 16pt;");
+        tab1.setStyle("-fx-font-size: 14pt;");
+        tab2.setStyle("-fx-font-size: 14pt;");
         VBox vBox1 = new VBox();
         VBox vBox2 = new VBox();
         vBox1.setAlignment(Pos.CENTER);
@@ -39,7 +39,7 @@ public class FirstPageController {
         }
 
         //NewsMoreButton
-        newsMoreButton = new MoreButton("Więcej");
+        newsMoreButton = new MoreButton("Załaduj więcej artykułów");
         newsMoreButton.setOnMouseClicked(s -> {
             newsMoreButton.arm();
             PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
@@ -56,7 +56,7 @@ public class FirstPageController {
         vBox1.getChildren().add(newsMoreButton);
 
         //SportMoreButton
-        sportMoreButton = new MoreButton("Więcej");
+        sportMoreButton = new MoreButton("Załaduj więcej artykułów");
         sportMoreButton.setOnMouseClicked(s -> {
             sportMoreButton.arm();
             PauseTransition pause = new PauseTransition(Duration.seconds(0.5));

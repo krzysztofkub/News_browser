@@ -38,6 +38,7 @@ public class ArticleTextField extends TextField {
             controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto) + intro + Article.getImages(artcile));
 
             Scene articleScene = new Scene(articleRoot);
+            articleScene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
             Stage articleStage = new Stage();
 
             articleStage.setScene(articleScene);

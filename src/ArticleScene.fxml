@@ -6,21 +6,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane fx:id="article" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ArticleScene">
+<AnchorPane fx:id="article" prefHeight="800.0" prefWidth="1300.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ArticleScene">
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonOnClick" text="Wróc">
+            <Button fx:id="button" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@styles.css" text="Wróc">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <TextField fx:id="title" editable="false" layoutX="91.0" layoutY="12.0" prefHeight="26.0" prefWidth="1187.0">
+            <TextField fx:id="title" editable="false" layoutX="126.0" layoutY="12.0" prefHeight="33.0" prefWidth="1173.0" styleClass="article">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </TextField>
-            <WebView fx:id="webView" fontScale="1.7" layoutX="20.0" layoutY="63.0" prefHeight="656.0" prefWidth="1271.0" />
+            <WebView fx:id="webView" fontScale="1.7" layoutX="20.0" layoutY="63.0" prefHeight="656.0" prefWidth="1279.0" />
          </children>
       </AnchorPane>
    </children>

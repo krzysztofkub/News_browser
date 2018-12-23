@@ -31,11 +31,6 @@ public class ArticleScene {
         return webView;
     }
 
-    public void initialize() {
-        button.setStyle("-fx-background-color: red");
-
-    }
-
     @FXML
     void buttonOnClick() {
         button.getScene().getWindow().hide();
