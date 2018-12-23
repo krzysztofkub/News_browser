@@ -24,9 +24,6 @@ public class ArticleScene {
     }
 
 
-
-
-
     public TextField getTitle() {
         return title;
     }
@@ -35,7 +32,6 @@ public class ArticleScene {
     public WebView getWebView() {
         return webView;
     }
-
 
     public void initialize() {
         button.setStyle("-fx-background-color: red");
@@ -47,8 +43,6 @@ public class ArticleScene {
         button.getScene().getWindow().hide();
         this.mainStage.show();
     }
-
-
 }
 
 
