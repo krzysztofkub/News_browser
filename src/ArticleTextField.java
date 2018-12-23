@@ -1,10 +1,7 @@
-package sample;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -28,7 +25,7 @@ public class ArticleTextField extends TextField {
         this.setOnMouseClicked(e -> {
             Stage stageTheTextFieldBelongs = (Stage) this.getScene().getWindow();
             Parent articleRoot = null;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ArticleScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ArticleScene.fxml"));
             try {
                 articleRoot = loader.load();
 
@@ -38,9 +35,7 @@ public class ArticleTextField extends TextField {
             ArticleScene controller = loader.getController();
             controller.setMainStage(stageTheTextFieldBelongs);
             controller.getTitle().setText(title);
-            controller.getIntro().setText(intro);
-
-            controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto) + Article.getImages(artcile));
+            controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto) + intro + Article.getImages(artcile));
 
             Scene articleScene = new Scene(articleRoot);
             Stage articleStage = new Stage();
@@ -49,8 +44,6 @@ public class ArticleTextField extends TextField {
             articleStage.setMaximized(true);
             stageTheTextFieldBelongs.hide();
             articleStage.show();
-
-
         });
     }
 

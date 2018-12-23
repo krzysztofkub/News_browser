@@ -1,10 +1,7 @@
-package sample;
-
 import javafx.scene.control.Button;
 
 public class MoreButton extends Button {
     private int count;
-
 
     public MoreButton(String text) {
         super(text);
@@ -15,11 +12,9 @@ public class MoreButton extends Button {
         this.setStyle("-fx-background-color:red; -fx-font-size:18; -fx-font-weight: bold");
     }
 
-
     public int getCount() {
         return count;
     }
-
 
     public void setCount(int count) {
         this.count = count;
