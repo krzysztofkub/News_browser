@@ -2,7 +2,6 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
@@ -15,8 +14,6 @@ public class ArticleScene {
     @FXML
     private Button button;
     @FXML
-    private TextArea intro;
-    @FXML
     private TextField title;
     @FXML
     private WebView webView;
@@ -27,9 +24,7 @@ public class ArticleScene {
     }
 
 
-    public TextArea getIntro() {
-        return intro;
-    }
+
 
 
     public TextField getTitle() {

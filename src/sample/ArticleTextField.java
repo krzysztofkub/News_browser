@@ -38,9 +38,7 @@ public class ArticleTextField extends TextField {
             ArticleScene controller = loader.getController();
             controller.setMainStage(stageTheTextFieldBelongs);
             controller.getTitle().setText(title);
-            controller.getIntro().setText(intro);
-
-            controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto) + Article.getImages(artcile));
+            controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto)+ intro + Article.getImages(artcile));
 
             Scene articleScene = new Scene(articleRoot);
             Stage articleStage = new Stage();

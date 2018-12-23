@@ -96,8 +96,11 @@ public class Article {
 
 
     public static String getImages(String article) {
-        return article.replaceAll("src=\"", "src=\"http:");
+        System.out.println(article.replaceAll("src=\"", "src=\"http:").replaceAll("<span class=\"copyright\">(.*)</span>",""));
+        return article.replaceAll("src=\"", "src=\"http:").replaceAll("<span class=\"copyright\">(.*)</span>","");
     }
+
+
 
 
 }
