@@ -35,7 +35,7 @@ public class Article {
 
 
     public static List<List<String>> getNextSportArticles(int count) {
-        Connection connect = Jsoup.connect("https://sport.onet.pl/?ajax=" + count + "&page=1");
+        Connection connect = Jsoup.connect("https://sport.onet.pl/?ajax=1&page=" + count);
         List<List<String>> list = new ArrayList<>();
         try {
             Document document = connect.get();
@@ -102,7 +102,7 @@ public class Article {
 
     public static List<List<String>> getNextNewsArticles(int count) {
 
-        Connection connect = Jsoup.connect("https://wiadomosci.onet.pl/?ajax=" + count + "&page=1");
+        Connection connect = Jsoup.connect("https://wiadomosci.onet.pl/?ajax=1&page=" + count);
         List<List<String>> list = loadByConnection(connect, "a.itemBoxNormal");
         return list;
     }
