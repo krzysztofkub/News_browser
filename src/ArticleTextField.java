@@ -6,39 +6,44 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
-public class ArticleTextField extends TextField {
+ class ArticleTextField extends TextField {
     private static int count = 1;
 
 
-    public ArticleTextField() {
-        count++;
-    }
 
 
-    public ArticleTextField(String text, String title, String intro, String artcile, String mainPhoto) {
+
+     ArticleTextField(String text, String href) {
         super(text);
         count++;
         this.setFont(new Font(20));
         this.setStyle("-fx-highlight-fill: null;\n" + "-fx-highlight-text-fill: null;");
         this.setEditable(false);
         this.setOnMouseClicked(e -> {
+
             Stage stageTheTextFieldBelongs = (Stage) this.getScene().getWindow();
             Parent articleRoot = null;
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ArticleScene.fxml"));
             try {
                 articleRoot = loader.load();
-
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
             ArticleScene controller = loader.getController();
             controller.setMainStage(stageTheTextFieldBelongs);
-            controller.getTitle().setText(title);
-            controller.getWebView().getEngine().loadContent(Article.getImages(mainPhoto) + intro + Article.getImages(artcile));
+            List<String> article = Article.getArticle(href);
+            controller.getTitle().setText(article.get(0));
+            controller.getWebView().getEngine().loadContent(article.get(3) + article.get(1) + article.get(2));
 
-            Scene articleScene = new Scene(articleRoot);
-            articleScene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+            Scene articleScene = null;
+            if (articleRoot != null) {
+                articleScene = new Scene(articleRoot);
+            }
+            if (articleScene != null) {
+                articleScene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+            }
             Stage articleStage = new Stage();
 
             articleStage.setScene(articleScene);
@@ -49,7 +54,7 @@ public class ArticleTextField extends TextField {
     }
 
 
-    public static int getCount() {
+    static int getCount() {
         return count;
     }
 }

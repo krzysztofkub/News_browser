@@ -1,9 +1,9 @@
 import javafx.scene.control.Button;
 
-public class MoreButton extends Button {
+class MoreButton extends Button {
     private int count;
 
-    public MoreButton(String text) {
+    MoreButton(String text) {
         super(text);
         count = 0;
         this.setPrefWidth(1000);
@@ -12,11 +12,11 @@ public class MoreButton extends Button {
 
     }
 
-    public int getCount() {
+    int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    void setCount(int count) {
         this.count = count;
     }
 }

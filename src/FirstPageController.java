@@ -1,9 +1,7 @@
-import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
-import javafx.util.Duration;
 
 import java.util.List;
 
@@ -26,9 +24,9 @@ public class FirstPageController {
         First view
          */
         //News
-        List<List<String>> page = Article.getAllNewsArticles();
-        for (List<String> article : page) {
-            ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + article.get(0), article.get(0),article.get(1), article.get(2),article.get(3));
+        List<List<String>> newsArticles = Article.newsTitles();
+        for (List<String> newsArticle : newsArticles) {
+            ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + newsArticle.get(1),newsArticle.get(0));
             vBox1.getChildren().add(textField);
         }
         //Sport
@@ -41,15 +39,11 @@ public class FirstPageController {
         //NewsMoreButton
         newsMoreButton = new MoreButton("Załaduj więcej artykułów");
         newsMoreButton.setOnMouseClicked(s -> {
-            newsMoreButton.arm();
-            PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
-            pause.setOnFinished(e -> newsMoreButton.disarm());
-            pause.play();
             newsMoreButton.setCount(newsMoreButton.getCount() + 1);
-            int count = page.size();
-            page.addAll(Article.getNextNewsArticles(newsMoreButton.getCount()));
-            for (int i = count; i < page.size(); i++) {
-                ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + page.get(i).get(0), page.get(i).get(0),page.get(i).get(1), page.get(i).get(2),page.get(i).get(3));
+            int count = newsArticles.size();
+            newsArticles.addAll(Article.getNextNewsArticles(newsMoreButton.getCount()));
+            for (int i = count; i < newsArticles.size(); i++) {
+                ArticleTextField textField = new ArticleTextField(ArticleTextField.getCount() + " : " + newsArticles.get(i).get(1), newsArticles.get(i).get(0) );
                 vBox1.getChildren().add(vBox1.getChildren().size() - 1, textField);
             }
         });
@@ -58,10 +52,6 @@ public class FirstPageController {
         //SportMoreButton
         sportMoreButton = new MoreButton("Załaduj więcej artykułów");
         sportMoreButton.setOnMouseClicked(s -> {
-            sportMoreButton.arm();
-            PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
-            pause.setOnFinished(e -> sportMoreButton.disarm());
-            pause.play();
             sportMoreButton.setCount(sportMoreButton.getCount() + 1);
             int count = sportArticles.size();
             sportArticles.addAll(Article.getNextSportArticles(sportMoreButton.getCount()));

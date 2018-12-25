@@ -1,14 +1,11 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 public class ArticleScene {
     private Stage mainStage;
-    @FXML
-    private AnchorPane article;
     @FXML
     private Button button;
     @FXML
@@ -17,17 +14,17 @@ public class ArticleScene {
     private WebView webView;
 
 
-    public void setMainStage(Stage mainStage) {
+    void setMainStage(Stage mainStage) {
         this.mainStage = mainStage;
     }
 
 
-    public TextField getTitle() {
+    TextField getTitle() {
         return title;
     }
 
 
-    public WebView getWebView() {
+    WebView getWebView() {
         return webView;
     }
 
